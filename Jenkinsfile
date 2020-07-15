@@ -7,7 +7,7 @@ pipeline {
 
   stages {
     stage('Compilation') {
-      java HelloWorld.java
+      sh 'java HelloWorld.java'
     }
   }
 }
