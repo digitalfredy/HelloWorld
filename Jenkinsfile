@@ -1,14 +1,10 @@
 pipeline {
-  agent {
-    docker {
-      image 'openjdk:11'
-    }
-  }
+  agent any
 
   stages {
-    stage('Compilation') {
+    stage('Echo') {
       steps {
-        sh 'java HelloWorld.java'
+        sh 'echo Branch name: ${BRANCH_NAME}'
       }
     }
   }
